@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - John Doe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-gray-900">Portfolio</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <button onclick="scrollToSection('home')" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        Home
+                    </button>
+                    <button onclick="scrollToSection('about')" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        About Me
+                    </button>
+                    <button onclick="scrollToSection('projects')" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        Projects
+                    </button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <button onclick="scrollToSection('home')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100">
+                    Home
+                </button>
+                <button onclick="scrollToSection('about')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100">
+                    About Me
+                </button>
+                <button onclick="scrollToSection('projects')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100">
+                    Projects
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        Hi, I am <span class="text-blue-600">Muhammad Nathan Sunarto</span>,
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl text-gray-700 mb-6">
+                        Mahasiswa Teknik Informatika
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Saya kuliah di Politeknik Negeri Jakarta dan sudah lulus dari CCIT-FTUI. 
+                        Passionate dalam pengembangan web dan analisis sistem dengan fokus pada 
+                        teknologi modern dan best practices.
+                    </p>
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Download CV
+                    </button>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full overflow-hidden shadow-2xl">
+                            <img 
+                                src="public\Profile.png" 
+                                alt="Profile" 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-9 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Pengalaman & Keahlian</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Selama perkuliahan di Politeknik Negeri Jakarta, saya telah mengembangkan berbagai 
+                        keterampilan dalam bidang teknologi informasi. Pengalaman di CCIT-FTUI memberikan 
+                        saya foundation yang kuat dalam computer science dan software engineering.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+Sebagai System Analyst, saya memiliki pengalaman berharga dalam proyek Sistem SPDLN (Sistem Pengajuan Dinas Luar Negeri), di mana saya bertanggung jawab atas analisis kebutuhan, perancangan arsitektur sistem, dan koordinasi tim. Saya mengidentifikasi kebutuhan pengguna melalui wawancara, merancang antarmuka web responsif menggunakan Figma, dan arsitektur backend dengan Architecture Enterprise menggunakan StarUML untuk memastikan skalabilitas dan keamanan. Dengan kolaborasi bersama tim pengembang dan QA, proyek ini menghasilkan sistem yang efisien dengan antarmuka intuitif, memperkuat kemampuan saya dalam analisis, desain solusi teknologi, dan manajemen proyek untuk mendukung transformasi digital.                    </p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Frontend Development</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HTML/CSS</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Backend Development</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Java</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">PHP</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">MYSQl</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Firebase</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Tools & Others</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Git</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Docker</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">RapidMiner</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Figma</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Architecture Enterprise</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">StarUML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl" style="margin-top: -455px;">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Pendidikan</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-600 pl-6">
+                            <h4 class="font-semibold text-gray-900">Politeknik Negeri Jakarta</h4>
+                            <p class="text-blue-600 mb-2">Teknik Informatika</p>
+                            <p class="text-gray-600 text-sm">2020 - 2024</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-gray-300 pl-6">
+                            <h4 class="font-semibold text-gray-900">CCIT-FTUI</h4>
+                            <p class="text-gray-600 mb-2">Computer Science Foundation</p>
+                            <p class="text-gray-600 text-sm">2019 - 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Berikut adalah beberapa project yang telah saya kerjakan selama perkuliahan dan pengembangan skill
+                </p>
+            </div>
+            
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold mb-4">Mari Berkolaborasi!</h3>
+                <p class="text-gray-300 mb-6">
+                    Saya terbuka untuk kesempatan kerja sama, magang, atau project freelance. 
+                    Jangan ragu untuk menghubungi saya!
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+                <a href="mailto:john.doe@email.com" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>nathanzzz1312@gmail.com</span>
+                </a>
+                <a href="tel:+6281234567890" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>+62 8129-0849-7176</span>
+                </a>
+            </div>
+            
+            
+            <div class="text-center text-gray-400 text-sm border-t border-gray-800 pt-8">
+                <p>&copy; 2025 Muhammad Nathan Sunarto. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
